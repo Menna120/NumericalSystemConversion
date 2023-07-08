@@ -10,10 +10,11 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:gravity="center_vertical"
-        android:maxLines="1"
-        android:paddingHorizontal="16dp"
         android:text=""
-        android:textSize="24sp"
+        android:paddingHorizontal="16dp"
+        android:textSize="32sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/output"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/select" />
@@ -21,11 +22,10 @@
     <TextView
         android:id="@+id/output"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:paddingHorizontal="16dp"
+        android:layout_height="60dp"
         android:text="@string/_0"
         android:textAlignment="textEnd"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button_del"
         app:layout_constraintEnd_toEndOf="@id/input"
         app:layout_constraintStart_toStartOf="@id/input"
@@ -33,9 +33,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_A"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="hexClick"
         android:text="@string/a"
@@ -47,21 +46,21 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_4"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_4"
         android:textSize="24sp"
-        android:onClick="click"
+        app:layout_constraintBottom_toTopOf="@+id/button_7"
         app:layout_constraintEnd_toEndOf="@+id/button_1"
         app:layout_constraintStart_toStartOf="@+id/button_1"
         app:layout_constraintTop_toBottomOf="@+id/button_1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_hex"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:text="@string/hex"
         android:textSize="24sp"
@@ -72,8 +71,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_0"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="click"
         android:text="@string/_0"
@@ -85,8 +84,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_9"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="click"
         android:text="@string/_9"
@@ -98,12 +97,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_8"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_8"
         android:textSize="24sp"
-        android:onClick="click"
         app:layout_constraintBottom_toBottomOf="@+id/button_7"
         app:layout_constraintEnd_toEndOf="@+id/button_5"
         app:layout_constraintStart_toStartOf="@+id/button_5"
@@ -111,26 +110,25 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_7"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_7"
         android:textSize="24sp"
-        android:onClick="click"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="@+id/button_4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button_4"
         app:layout_constraintTop_toBottomOf="@+id/button_4" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_5"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_5"
         android:textSize="24sp"
-        android:onClick="click"
         app:layout_constraintBottom_toBottomOf="@+id/button_4"
         app:layout_constraintEnd_toEndOf="@+id/button_2"
         app:layout_constraintStart_toStartOf="@+id/button_2"
@@ -138,22 +136,21 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_1"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_1"
         android:textSize="24sp"
-        android:onClick="click"
+        app:layout_constraintBottom_toTopOf="@+id/button_4"
         app:layout_constraintEnd_toEndOf="@+id/button_D"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button_D"
         app:layout_constraintTop_toBottomOf="@+id/button_D" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_oct"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:text="@string/oct"
         android:textSize="24sp"
@@ -164,8 +161,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_6"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="click"
         android:text="@string/_6"
@@ -177,25 +174,24 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_dec"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:text="@string/_dec"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_F"
         app:layout_constraintEnd_toEndOf="@+id/button_bin"
         app:layout_constraintStart_toStartOf="@+id/button_bin"
-        app:layout_constraintTop_toTopOf="@+id/button_F"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/button_F" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_2"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="click"
         android:text="@string/_2"
         android:textSize="24sp"
-        android:onClick="click"
         app:layout_constraintBottom_toBottomOf="@+id/button_1"
         app:layout_constraintEnd_toEndOf="@+id/button_E"
         app:layout_constraintStart_toStartOf="@+id/button_E"
@@ -203,8 +199,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_3"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="click"
         android:text="@string/_3"
@@ -216,9 +212,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_bin"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:text="@string/bin"
         android:textSize="24sp"
@@ -229,36 +224,30 @@
 
     <ImageView
         android:id="@+id/button_del"
-        android:layout_width="75dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:src="@drawable/baseline_backspace_24"
         app:layout_constraintBottom_toTopOf="@+id/button_bin"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/button_bin"
         app:layout_constraintTop_toBottomOf="@+id/output" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_F"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="hexClick"
         android:text="@string/f"
         android:textSize="24sp"
-        android:onClick="hexClick"
         app:layout_constraintBottom_toBottomOf="@+id/button_E"
         app:layout_constraintEnd_toEndOf="@+id/button_C"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/button_C"
-        app:layout_constraintTop_toTopOf="@+id/button_E"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/button_E" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_C"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
         android:onClick="hexClick"
         android:text="@string/c"
@@ -266,17 +255,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/button_B"
         app:layout_constraintEnd_toStartOf="@+id/button_bin"
         app:layout_constraintStart_toEndOf="@+id/button_B"
-        app:layout_constraintTop_toTopOf="@+id/button_B"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/button_B" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_E"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="hexClick"
         android:text="@string/e"
         android:textSize="24sp"
-        android:onClick="hexClick"
         app:layout_constraintBottom_toBottomOf="@+id/button_D"
         app:layout_constraintEnd_toEndOf="@+id/button_B"
         app:layout_constraintStart_toStartOf="@+id/button_B"
@@ -284,13 +272,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_D"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="hexClick"
         android:text="@string/d"
         android:textSize="24sp"
-        android:onClick="hexClick"
         app:layout_constraintBottom_toTopOf="@+id/button_1"
         app:layout_constraintEnd_toEndOf="@+id/button_A"
         app:layout_constraintStart_toStartOf="@+id/button_A"
@@ -298,14 +285,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_B"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/_65dp"
+        android:layout_height="@dimen/_65dp"
         android:background="@drawable/button"
+        android:onClick="hexClick"
         android:text="@string/b"
         android:textSize="24sp"
-        android:onClick="hexClick"
         app:layout_constraintBottom_toBottomOf="@+id/button_A"
         app:layout_constraintEnd_toStartOf="@+id/button_C"
         app:layout_constraintStart_toEndOf="@+id/button_A"
@@ -316,7 +301,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.04" />
+        app:layout_constraintGuide_percent="0.04136253" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -337,8 +322,16 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:entries="@array/numSystem"
+        app:layout_constraintBottom_toTopOf="@+id/input"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9562243" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
