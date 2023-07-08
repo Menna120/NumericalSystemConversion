@@ -315,7 +315,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07565012" />
+        app:layout_constraintGuide_percent="0.056737587" />
 
     <Spinner
         android:id="@+id/select"
@@ -332,6 +332,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9562243" />
+        app:layout_constraintGuide_percent="0.9243499" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
