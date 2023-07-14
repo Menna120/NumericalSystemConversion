@@ -35,28 +35,29 @@ class MainActivity : AppCompatActivity() {
 
     private fun addCallBacks() {
         // You can use binding.apply{} to avoid repeating binding. every time
-        binding.buttonDel.setOnClickListener { delClick() }
-        binding.buttonBin.setOnClickListener { binClick() }
-        binding.buttonDec.setOnClickListener { decClick() }
-        binding.buttonOct.setOnClickListener { octClick() }
-        binding.buttonHex.setOnClickListener { hexClick() }
-        binding.select.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                selected = parent?.getItemAtPosition(position).toString()
+        binding.apply {
+            buttonDel.setOnClickListener { delClick() }
+            buttonBin.setOnClickListener { binClick() }
+            buttonDec.setOnClickListener { decClick() }
+            buttonOct.setOnClickListener { octClick() }
+            buttonHex.setOnClickListener { hexClick() }
+            select.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    selected = parent?.getItemAtPosition(position).toString()
 
-                binding.output.text = "0"
-                binding.input.text = ""
-            }
+                    binding.output.text = "0"
+                    binding.input.text = ""
+                }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
-            }
-        }
+                override fun onNothingSelected(p0: AdapterView<*>?) {
+                    TODO("Not yet implemented")
+                }
+            } }
     }
 
     private fun View.displayInputText() {
@@ -76,24 +77,24 @@ class MainActivity : AppCompatActivity() {
     private fun value(view: View): String {
         val temp = (view as Button).text.toString()
         return if (map[selected]!! > temp.toInt()) temp else {
-            // makeToast("Invalid Input")
+             makeToast("Invalid Input")
             ""
         }
     }
 
     fun click(view: View) {
-        //if (handleInputSize())
-        view.displayInputText()
+        if (handleInputSize())
+            view.displayInputText()
     }
 
     fun hexClick(view: View) {
         // handle input size for hex
-        if (selected == "Hex" /* && binding.input.text.length < 7 */)
+        if (selected == "Hex"  && binding.input.text.length < 7 )
             displayInputTextHex((view as Button).text.toString())
-//        else if (selected == "Hex")
-//            makeToast("Max input size reached")
-//        else
-//            makeToast("Invalid Input")
+        else if (selected == "Hex")
+            makeToast("Max input size reached")
+        else
+            makeToast("Invalid Input")
     }
 
     private fun convertToDec(): Int {
@@ -111,11 +112,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun decClick() {
-        outputText = if (selected != "Dec" && inputText != "") {
-            Integer.parseInt(inputText, map[selected]!!).toString()
-            // convertToDec().toString()
-        } else
-            inputText
+//        outputText = if (selected != "Dec" && inputText != "") {
+//            Integer.parseInt(inputText, map[selected]!!).toString()
+//            // convertToDec().toString()
+//        } else
+//            inputText
+        outputText = if(inputText != "")
+                convertToDec().toString()
+            else
+                "0"
         displayOutputText()
     }
 
@@ -141,23 +146,23 @@ class MainActivity : AppCompatActivity() {
         binding.output.text = "0"
     }
 
-//    private fun makeToast(msg: String) {
-//        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-//    }
-//
-//    private fun handleInputSize(): Boolean {
-//        val maxSize = when (selected) {
-//            "Bin" -> 31
-//            "Oct" -> 10
-//            "Dec" -> 9
-//            "Hex" -> 7
-//            else -> 7
-//        }
-//        return if (maxSize == inputText.length) {
-//            makeToast("Max input size reached")
-//            false
-//        } else {
-//            true
-//        }
-//    }
+    private fun makeToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun handleInputSize(): Boolean {
+        val maxSize = when (selected) {
+            "Bin" -> 31
+            "Oct" -> 10
+            "Dec" -> 9
+            "Hex" -> 7
+            else -> 7
+        }
+        return if (maxSize == inputText.length) {
+            makeToast("Max input size reached")
+            false
+        } else {
+            true
+        }
+    }
 }
